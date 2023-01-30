@@ -23,6 +23,7 @@ steps:
     testType: 'container'
     dockerImageName: 'Snyk_image'
     monitorWhen: 'always'
-    failOnIssues: false
+    failOnIssues: true
     projectName: 'sekharreddy0463'
     organization: 'sekharreddy0463'
+    
