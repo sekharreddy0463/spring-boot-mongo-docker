@@ -8,21 +8,8 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- task: SnykSecurityScan@1
-  inputs:
-      serviceConnectionEndpoint: 'sekharreddy04631'
-      testType: 'app'
-      monitorWhen: 'always'
-      failOnIssues: false
-      projectName: 'sekharreddy0463'
-      organization: 'sekharreddy0463'
-    
+    npm install
+    npm run build     
+  displayName: 'npm install and build'
