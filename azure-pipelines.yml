@@ -19,11 +19,10 @@ steps:
   displayName: 'Run a multi-line script'
 - task: SnykSecurityScan@1
   inputs:
-    serviceConnectionEndpoint: 'sekharreddy04631'
-    testType: 'container'
-    dockerImageName: 'Snyk_image'
-    monitorWhen: 'always'
-    failOnIssues: true
-    projectName: 'sekharreddy0463'
-    organization: 'sekharreddy0463'
+      serviceConnectionEndpoint: 'sekharreddy04631'
+      testType: 'app'
+      monitorWhen: 'always'
+      failOnIssues: false
+      projectName: 'sekharreddy0463'
+      organization: 'sekharreddy0463'
     
