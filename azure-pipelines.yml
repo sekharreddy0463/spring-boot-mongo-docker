@@ -11,7 +11,10 @@ pool:
   
 steps:
 - script: |
-    npm install
-    npm run build   
-  displayName: 'npm install and build'
-  
+    curl -L https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64 -o /usr/bin/clair-scanner
+      chmod +x /usr/bin/clair-scanner
+      - task: DockerInstaller@0
+        inputs:
+          dockerVersion: '17.09.0-ce'
+      docker pull nginx
+      clair-scanner --ip="localhost" nginx
